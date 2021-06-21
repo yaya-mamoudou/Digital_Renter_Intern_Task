@@ -37,7 +37,7 @@ const Section = ({children, title}): Node => {
             color: isDarkMode ? Colors.white : Colors.black,
           },
         ]}>
-        Hey thre
+        Hey there
         {title}
       </Text>
       <Text
