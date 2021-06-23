@@ -4,20 +4,17 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import All from './All';
 import Recommeded from './Recommeded';
 import {NavigationContainer} from '@react-navigation/native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const Tab = createMaterialTopTabNavigator();
 export default function Categories() {
-  const inset = useSafeAreaInsets();
   return (
     <NavigationContainer>
       <Tab.Navigator
+        style={{}}
         swipeEnabled={false}
         tabBarOptions={{
           style: {
-            // marginTop: inset.top,
             backgroundColor: '#eee',
-            borderColor: 'red',
             borderTopWidth: 0,
             elevation: 0,
           },
@@ -25,17 +22,18 @@ export default function Categories() {
             textTransform: 'capitalize',
             fontSize: 11,
             fontWeight: 'bold',
-            // textAlign: 'left',
           },
           indicatorStyle: {
-            width: '3%',
+            width: '5%',
             backgroundColor: 'black',
-            marginHorizontal: Dimensions.get('screen').width / 9,
+            // marginHorizontal: Dimensions.get('screen').width / 9,
             height: 4,
+            marginLeft: '3%',
           },
           tabStyle: {
             borderTopColor: 'red',
             borderTopWidth: 0,
+            width: 'auto',
           },
         }}
         initialRouteName="Home">

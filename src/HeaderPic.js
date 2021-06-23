@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet, Image, Text, View} from 'react-native';
+import {StyleSheet, Dimensions, Image, Text, View} from 'react-native';
 
+const {width, height} = new Dimensions.get('screen');
 export default function HeaderPic() {
   return (
     <View style={styles.headerPic}>
@@ -24,22 +25,21 @@ const styles = StyleSheet.create({
     backgroundColor: '#eee',
   },
   doted: {
-    width: 140,
-    height: 135,
+    width: 125,
+    height: 125,
     borderRadius: 75,
     borderColor: 'black',
     borderWidth: 2,
     borderStyle: 'dotted',
     position: 'absolute',
-    right: '6%',
-    // borderBottom: 'none',
+    right: '8%',
   },
   image: {
-    width: 130,
-    height: 130,
+    width: 125,
+    height: 125,
     position: 'absolute',
     right: '8%',
-    top: 10,
+    top: 8,
     zIndex: 3,
   },
   TextView: {

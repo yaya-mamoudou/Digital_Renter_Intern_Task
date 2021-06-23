@@ -4,6 +4,7 @@ import Categories from './Categories';
 import HeaderPic from './HeaderPic';
 import HomeHeader from './HomeHeader';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Suggestions from './Suggestions';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeHeader />
       <HeaderPic />
       <Categories />
+      <Suggestions />
     </SafeAreaProvider>
   );
 }
