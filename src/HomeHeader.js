@@ -25,10 +25,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginHorizontal: 8,
   },
+
   header: {
     flexDirection: 'row',
     // backgroundColor: 'red',
     padding: '2%',
     alignItems: 'center',
+    // marginTop: 20,
   },
 });

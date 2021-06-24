@@ -4,13 +4,16 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import All from './All';
 import Recommeded from './Recommeded';
 import {NavigationContainer} from '@react-navigation/native';
+const {width, height} = new Dimensions.get('screen');
 
 const Tab = createMaterialTopTabNavigator();
 export default function Categories() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        style={{}}
+        style={{
+          paddingLeft: 10,
+        }}
         swipeEnabled={false}
         tabBarOptions={{
           style: {
@@ -26,7 +29,6 @@ export default function Categories() {
           indicatorStyle: {
             width: '5%',
             backgroundColor: 'black',
-            // marginHorizontal: Dimensions.get('screen').width / 9,
             height: 4,
             marginLeft: '3%',
           },
@@ -38,9 +40,9 @@ export default function Categories() {
         }}
         initialRouteName="Home">
         <Tab.Screen name="All" component={All} />
-        <Tab.Screen name="Recommended" component={Recommeded} />
+        <Tab.Screen name="Recommended" component={All} />
         <Tab.Screen name="Popular Books" component={All} />
-        <Tab.Screen name="My Books" component={Recommeded} />
+        <Tab.Screen name="My Books" component={All} />
       </Tab.Navigator>
     </NavigationContainer>
   );
