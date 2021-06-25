@@ -1,62 +1,51 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   FlatList,
   Dimensions,
-  Image,
   StyleSheet,
-  Text,
   View,
+  TouchableOpacity,
 } from 'react-native';
 import AllFlatlistComp1 from './AllFlatlistComp1';
 import Suggestions from './Suggestions';
-
+import {AllItems} from './data/DataSet';
+import MyModal from './MyModal';
 const {width, height} = new Dimensions.get('screen');
-const AllItems = [
-  {
-    img: {uri: 'https://bit.ly/2UkSTId'},
-    title: 'The Little Mermaid',
-    des: 'The 1989 animated feature adapted by Disne.',
-    cat: 'fery tales',
-  },
-  {
-    img: {uri: 'https://bit.ly/3h0nYZB'},
-    title: 'Cruella',
-    des: "MAC's Cruella-Inspired Makeup Is Its Most Diabolical Disney  ",
-    cat: 'fery tales',
-  },
-  {
-    img: {uri: 'https://bit.ly/3xE3c8G'},
-    title: 'Mullan',
-    des: 'Malay MailMalaysian cinema chains hit by Covid-19 outbreak w',
-    cat: 'fery tales',
-  },
-  {
-    img: {uri: 'https://bit.ly/2UkSTId'},
-    title: 'The Little Mermaid',
-    des: 'The 1989 animated feature adapted by Disne.',
-    cat: 'fery tales',
-  },
-];
+
 export default function All() {
+  const [modalState, setmodalState] = useState(false);
+  const [modalData, setmodalData] = useState({});
+  const toggleModal = () => {
+    modalState ? setmodalState(false) : setmodalState(true);
+  };
+  const nextScreen = item => {
+    new Promise((resolve, reject) => {
+      resolve(setmodalData(item));
+    }).then(() => toggleModal());
+  };
   return (
     <View style={{marginTop: 10}}>
+      <MyModal
+        modalVisible={modalState}
+        modalData={modalData}
+        setModalVisible={toggleModal}
+      />
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{
-          height:
-            height > width
-              ? height < 700
-                ? height * 0.25
-                : height * 0.2
-              : width * 0.3,
-        }}
+        contentContainerStyle={styles.flatLstyle}
         decelerationRate="fast"
         snapToInterval={20}
         data={AllItems}
         keyExtractor={(item, index) => index}
         renderItem={({item, index}) => {
-          return <AllFlatlistComp1 item={item} index={index} />;
+          return (
+            <TouchableOpacity
+              style={{alignSelf: 'flex-end'}}
+              onPress={() => nextScreen(item)}>
+              <AllFlatlistComp1 item={item} index={index} />
+            </TouchableOpacity>
+          );
         }}
       />
       <Suggestions />
@@ -64,4 +53,13 @@ export default function All() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  flatLstyle: {
+    height:
+      height > width
+        ? height < 700
+          ? height * 0.25
+          : height * 0.2
+        : width * 0.3,
+  },
+});

@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Dimensions, Image, Text, View} from 'react-native';
 
 const {width, height} = new Dimensions.get('screen');
+
 export default function HeaderPic() {
   return (
     <View style={styles.headerPic}>
@@ -62,7 +63,6 @@ const styles = StyleSheet.create({
     height: '80%',
     position: 'relative',
     zIndex: 1,
-    // top: 20,
     borderRadius: 10,
     paddingHorizontal: '5%',
     paddingTop: '2%',

@@ -28,9 +28,7 @@ const styles = StyleSheet.create({
 
   header: {
     flexDirection: 'row',
-    // backgroundColor: 'red',
     padding: '2%',
     alignItems: 'center',
-    // marginTop: 20,
   },
 });

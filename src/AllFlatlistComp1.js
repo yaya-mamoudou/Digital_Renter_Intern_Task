@@ -14,6 +14,7 @@ export default function AllFlatlistComp1({item, index}) {
         backgroundColor: 'white',
         flexDirection: 'row',
         marginRight: width * 0.05,
+        marginLeft: 10,
         borderRadius: 7,
         justifyContent: 'space-around',
         alignSelf: 'flex-end',
@@ -33,7 +34,12 @@ export default function AllFlatlistComp1({item, index}) {
               : -width * 0.3 * 0.22,
         }}>
         <Image
-          style={{width: '100%', height: '100%', borderRadius: 7}}
+          style={{
+            width: '100%',
+            height: '100%',
+            borderRadius: 7,
+            resizeMode: 'cover',
+          }}
           source={item.img}
         />
       </View>

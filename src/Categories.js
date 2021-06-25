@@ -1,48 +1,29 @@
 import React from 'react';
-import {StyleSheet, Text, View, Dimensions} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import All from './All';
-import Recommeded from './Recommeded';
+import Recommended from './Recommeded';
+
 import {NavigationContainer} from '@react-navigation/native';
 const {width, height} = new Dimensions.get('screen');
-
 const Tab = createMaterialTopTabNavigator();
+
 export default function Categories() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        style={{
-          paddingLeft: 10,
-        }}
         swipeEnabled={false}
         tabBarOptions={{
-          style: {
-            backgroundColor: '#eee',
-            borderTopWidth: 0,
-            elevation: 0,
-          },
-          labelStyle: {
-            textTransform: 'capitalize',
-            fontSize: 11,
-            fontWeight: 'bold',
-          },
-          indicatorStyle: {
-            width: '5%',
-            backgroundColor: 'black',
-            height: 4,
-            marginLeft: '3%',
-          },
-          tabStyle: {
-            borderTopColor: 'red',
-            borderTopWidth: 0,
-            width: 'auto',
-          },
+          style: styles.tabstyle,
+          labelStyle: styles.labelStyle,
+          indicatorStyle: styles.indicatorStyle,
+          tabStyle: styles.tabStyle,
         }}
         initialRouteName="Home">
         <Tab.Screen name="All" component={All} />
-        <Tab.Screen name="Recommended" component={All} />
-        <Tab.Screen name="Popular Books" component={All} />
-        <Tab.Screen name="My Books" component={All} />
+        <Tab.Screen name="Recommended" component={Recommended} />
+        <Tab.Screen name="Popular Books" component={Recommended} />
+        <Tab.Screen name="My Books" component={Recommended} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -51,5 +32,28 @@ export default function Categories() {
 const styles = StyleSheet.create({
   categories: {
     backgroundColor: '#eee',
+  },
+  tabStyle: {
+    borderTopColor: 'red',
+    borderTopWidth: 0,
+    paddingRight: '3%',
+    paddingLeft: 0,
+    width: 'auto',
+  },
+  indicatorStyle: {
+    width: '2%',
+    backgroundColor: 'black',
+    height: 4,
+    marginLeft: '3%',
+  },
+  labelStyle: {
+    textTransform: 'capitalize',
+    fontSize: 11,
+    fontWeight: 'bold',
+  },
+  tabstyle: {
+    backgroundColor: '#eee',
+    borderTopWidth: 0,
+    elevation: 0,
   },
 });
