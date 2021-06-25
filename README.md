@@ -8,22 +8,31 @@ The aim of this project was to reproduce the UI Bellow
 To start this project i used the following steps (after setting up my react native coding environment):
 
 1. npx react-native init DRTASK
-2. react-native run-android
-3. npm start
+2. cd DRTASK
+3. react-native run-android
+4. npm start
+
+
 
 ## List of Libraries used
 
 1. react-native-vector-icons: i used this package to get icons 
 2. @react-navigation/material-top-tabs : to produce a top tab bar in the app
 
+
+
 ## Output for first screen
 
 ![Screenshot_1624646612](https://user-images.githubusercontent.com/57509871/123485041-44a66900-d601-11eb-9406-b306626dc010.png)
 
 
+
+
 ## Output for Second screen
 
 ![Screenshot_1624646638](https://user-images.githubusercontent.com/57509871/123485334-d01ffa00-d601-11eb-9120-d85058dd9008.png)
+
+
 
 ## Steps to run this app:
 
@@ -32,3 +41,6 @@ To start this project i used the following steps (after setting up my react nati
 3. npm i
 4. react-native run-android
 5. npm start
+
+### link to code explanation(Youtube) 
+https://youtu.be/lEgY2JeArB4
