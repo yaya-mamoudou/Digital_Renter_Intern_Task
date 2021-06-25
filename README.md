@@ -23,14 +23,14 @@ To start this project i used the following steps (after setting up my react nati
 
 ## Output for first screen
 
-![Screenshot_1624646612](https://user-images.githubusercontent.com/57509871/123485041-44a66900-d601-11eb-9406-b306626dc010.png)
+<img src="https://user-images.githubusercontent.com/57509871/123485041-44a66900-d601-11eb-9406-b306626dc010.png" width="400" height="700">
 
 
 
 
 ## Output for Second screen
 
-![Screenshot_1624646638](https://user-images.githubusercontent.com/57509871/123485334-d01ffa00-d601-11eb-9120-d85058dd9008.png)
+<img src="https://user-images.githubusercontent.com/57509871/123485334-d01ffa00-d601-11eb-9120-d85058dd9008.png" width="400" height="700">
 
 
 
