@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   labelStyle: {
     textTransform: 'capitalize',
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: 'bold',
   },
   tabstyle: {

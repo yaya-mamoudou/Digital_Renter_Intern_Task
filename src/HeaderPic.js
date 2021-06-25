@@ -21,16 +21,29 @@ export default function HeaderPic() {
 const styles = StyleSheet.create({
   headerPic: {
     position: 'relative',
-    paddingHorizontal: '2%',
+    paddingHorizontal: '2.5%',
     // backgroundColor: 'yellow',
     height:
-      height < 600 ? (height > width ? height * 0.17 : height * 0.3) : 150,
+      height < 600
+        ? height > width
+          ? height * 0.17
+          : height * 0.3
+        : height * 0.15,
     justifyContent: 'center',
   },
   doted: {
-    width: height < 600 ? (height > width ? height * 0.17 : height * 0.3) : 150,
+    width:
+      height < 600
+        ? height > width
+          ? height * 0.17
+          : height * 0.3
+        : height * 0.15,
     height:
-      height < 600 ? (height > width ? height * 0.17 : height * 0.3) : 150,
+      height < 600
+        ? height > width
+          ? height * 0.17
+          : height * 0.3
+        : height * 0.15,
     borderRadius: 75,
     borderColor: 'black',
     borderWidth: 2,
@@ -44,13 +57,13 @@ const styles = StyleSheet.create({
         ? height > width
           ? height * 0.17 - 5
           : height * 0.3 - 5
-        : 150,
+        : height * 0.14,
     height:
       height < 600
         ? height > width
           ? height * 0.17 - 5
           : height * 0.3 - 5
-        : 150,
+        : height * 0.14,
     position: 'absolute',
     right: '9%',
     top: 6,

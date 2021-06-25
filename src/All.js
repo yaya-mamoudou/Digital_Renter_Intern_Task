@@ -15,6 +15,7 @@ const {width, height} = new Dimensions.get('screen');
 export default function All() {
   const [modalState, setmodalState] = useState(false);
   const [modalData, setmodalData] = useState({});
+
   const toggleModal = () => {
     modalState ? setmodalState(false) : setmodalState(true);
   };
@@ -34,8 +35,8 @@ export default function All() {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.flatLstyle}
-        decelerationRate="fast"
-        snapToInterval={20}
+        decelerationRate="normal"
+        snapToInterval={2}
         data={AllItems}
         keyExtractor={(item, index) => index}
         renderItem={({item, index}) => {
@@ -48,7 +49,7 @@ export default function All() {
           );
         }}
       />
-      <Suggestions />
+      <Suggestions nextScreen={nextScreen} />
     </View>
   );
 }

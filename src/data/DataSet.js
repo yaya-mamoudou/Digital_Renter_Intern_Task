@@ -8,7 +8,7 @@ const AllItems = [
     cat: 'fery tales',
   },
   {
-    img: {uri: 'https://bit.ly/3jdncv6'},
+    img: {uri: 'https://bit.ly/2U3JhBL'},
     title: 'The Little Mermaid',
     des: 'The 1989 animated feature adapted by Disne.',
     desLong:

@@ -1,15 +1,21 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import Home from './src/Home';
-import {NavigationContainer} from '@react-navigation/native';
+import {ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import Categories from './src/Categories';
+import HeaderPic from './src/HeaderPic';
+import HomeHeader from './src/HomeHeader';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <View style={styles.app}>
-      <Home />
-    </View>
-    // </NavigationContainer>
+    <SafeAreaProvider style={{backgroundColor: '#eee'}}>
+      <ScrollView>
+        <StatusBar backgroundColor="#eee" />
+        <HomeHeader />
+        <HeaderPic />
+        <Categories />
+      </ScrollView>
+    </SafeAreaProvider>
   );
 }
 
